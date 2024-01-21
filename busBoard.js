@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 import readline from 'readline-sync';
-//https://api.tfl.gov.uk/StopPoint/?lat=51.365242&lon=-0.225926&stopTypes=NaptanPublicBusCoachTram
 
 console.log('\nPlease enter the postcode:');
 const input = readline.prompt();
@@ -11,11 +10,10 @@ fetch(`https://api.postcodes.io/postcodes/${input}`,{
 })
 .then(response => response.json())
     .then(body => {
-        //console.log(body);
         let lat = body['result']['latitude'];
-        console.log(lat)
+        //console.log(lat)
         let lon = body['result']['longitude'];
-        console.log(lon);
+        //console.log(lon);
         fetch(`https://api.tfl.gov.uk/StopPoint/?lat=${lat}&lon=${lon}&stopTypes=NaptanPublicBusCoachTram`, {
                 method: 'GET',
                 // Request headers
@@ -26,11 +24,14 @@ fetch(`https://api.postcodes.io/postcodes/${input}`,{
             .then(body => {
                 let arrBusStops = [];
                 for(let i=0; i<body['stopPoints'].length; i++){
-                        arrBusStops.push(body['stopPoints'][i]['naptanId']);
-                        console.log(arrBusStops);
+                        arrBusStops.push({naptanId:body['stopPoints'][i]['naptanId'],indicator:body['stopPoints'][i]['indicator'],distance:body['stopPoints'][i]['distance']});
                 }
+                arrBusStops.sort(function(x, y){return x.distance - y.distance});
+                //console.log(arrBusStops.length)
                 for(let j=0;j<arrBusStops.length; j++){
-                        fetch(`https://api.tfl.gov.uk/StopPoint/${arrBusStops[j]}/Arrivals`, {
+                        console.log(arrBusStops)
+                        console.log(arrBusStops[j]['naptanId']);
+                        fetch(`https://api.tfl.gov.uk/StopPoint/${arrBusStops[j]['naptanId']}/Arrivals`, {
                                 method: 'GET',
                         // Request headers
                         headers: {'Cache-Control': 'no-cache',}
@@ -41,33 +42,19 @@ fetch(`https://api.postcodes.io/postcodes/${input}`,{
                         const lineTime = [];
                         for (let i=0; i<body.length; i++) {
                                 
-                                lineTime.push([body[i]['lineId'], body[i]['expectedArrival']])
+                                lineTime.push({lineId:body[i]['lineId'], expectedArrival:body[i]['expectedArrival']})
                         }
+                        lineTime.sort(function(x, y){return new Date(x.expectedArrival) - new Date(y.expectedArrival)});
                         // prints out the next 5 buses at that stop.
-                        console.log(lineTime.sort(each=>each[1]));
+                        console.log(lineTime);
                 });}
                 
             });
     });
 
-/*
-fetch(`https://api.tfl.gov.uk/StopPoint/${input}/Arrivals`, {
-        method: 'GET',
-        // Request headers
-        headers: {
-            'Cache-Control': 'no-cache',}
-    })
-    .then(response => response.json())
-    .then(body => {
-        //console.log(body);
-        //console.log(body[0]);
-        const lineTime = [];
-        for (let i=0; i<body.length; i++) {
-                
-                lineTime.push([body[i]['lineId'], body[i]['expectedArrival']])
-        }
-        // prints out the next 5 buses at that stop.
-        console.log(lineTime.sort(each=>each[1]));
-    }
-    );
-*/
+    function sortObj(obj) {
+        return Object.keys(obj).sort().reduce(function (result, key) {
+          result[key] = obj[key];
+          return result;
+        }, {});
+      }

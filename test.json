@@ -1,0 +1,248 @@
+{
+    "$type": "Tfl.Api.Presentation.Entities.StopPointsResponse, Tfl.Api.Presentation.Entities",
+    "centrePoint": [
+        51.365,
+        -0.225
+    ],
+    "stopPoints": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "490009524R",
+            "indicator": "Stop R",
+            "stopLetter": "R",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1009524",
+            "stopType": "NaptanPublicBusCoachTram",
+            "stationNaptan": "490G00009524",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "151",
+                    "name": "151",
+                    "uri": "/Line/151",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "213",
+                    "name": "213",
+                    "uri": "/Line/213",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "613",
+                    "name": "613",
+                    "uri": "/Line/613",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "627",
+                    "name": "627",
+                    "uri": "/Line/627",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490009524R",
+                    "stationAtcoCode": "490G00009524",
+                    "lineIdentifier": [
+                        "151",
+                        "213",
+                        "613",
+                        "627"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "bus",
+                    "lineIdentifier": [
+                        "151",
+                        "213",
+                        "613",
+                        "627"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "490009524R",
+            "commonName": "Malden Road / Priory Road",
+            "distance": 154.01565471113437,
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "CompassPoint",
+                    "sourceSystemKey": "Naptan490",
+                    "value": "SE"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "Towards",
+                    "sourceSystemKey": "CountDown",
+                    "value": "Sutton"
+                }
+            ],
+            "children": [],
+            "lat": 51.365675,
+            "lon": -0.223065
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "490009524S",
+            "indicator": "Stop S",
+            "stopLetter": "S",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1009524",
+            "stopType": "NaptanPublicBusCoachTram",
+            "stationNaptan": "490G00009524",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "151",
+                    "name": "151",
+                    "uri": "/Line/151",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "213",
+                    "name": "213",
+                    "uri": "/Line/213",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "613",
+                    "name": "613",
+                    "uri": "/Line/613",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "627",
+                    "name": "627",
+                    "uri": "/Line/627",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "93",
+                    "name": "93",
+                    "uri": "/Line/93",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490009524S",
+                    "stationAtcoCode": "490G00009524",
+                    "lineIdentifier": [
+                        "151",
+                        "213",
+                        "613",
+                        "627",
+                        "93"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "bus",
+                    "lineIdentifier": [
+                        "151",
+                        "213",
+                        "613",
+                        "627",
+                        "93"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "490009524S",
+            "commonName": "Malden Road / Priory Road",
+            "distance": 170.443022140715,
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "CompassPoint",
+                    "sourceSystemKey": "Naptan490",
+                    "value": "N"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "Towards",
+                    "sourceSystemKey": "CountDown",
+                    "value": "Morden Or Worcester Park"
+                }
+            ],
+            "children": [],
+            "lat": 51.366438,
+            "lon": -0.224156
+        }
+    ],
+    "pageSize": 0,
+    "total": 0,
+    "page": 0
+}
